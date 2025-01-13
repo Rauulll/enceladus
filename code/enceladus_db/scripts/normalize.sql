@@ -67,25 +67,26 @@ create table events(
    spass_type_id int references spass_types (id)
 );
 
-insert into events(
+-- Insert data into events table with foreign key references
+insert into events (
     time_stamp,
     title,
-    description
+    description,
+    event_type_id,
+    target_id,
+    team_id,
+    request_id,
+    spass_type_id
 )
 select
     import.master_plan.start_time_utc::timestamptz at time zone 'UTC',
     import.master_plan.title,
-    import.master_plan.description
-from import.master_plan;
-
-select import.master_plan.start_time_utc::timestamp,
-       import.master_plan.title,
-       import.master_plan.description,
-       public.event_types.id as even_type_id,
-       public.targets.id     as target_id,
-       public.requests.id    as request_id,
-       public.spass_types.id as spass_type_id,
-       public.teams.id       as team_id
+    import.master_plan.description,
+    public.event_types.id as event_type_id,
+    public.targets.id as target_id,
+    public.teams.id as team_id,
+    public.requests.id as request_id,
+    public.spass_types.id as spass_type_id
 from import.master_plan
          left join event_types
                    on event_types.description = import.master_plan.library_definition
@@ -96,7 +97,8 @@ from import.master_plan
          left join spass_types
                    on spass_types.description = import.master_plan.spass_type
          left join teams
-                   on teams.description = import.master_plan.team
+                   on teams.description = import.master_plan.team;
+
 
 
 
