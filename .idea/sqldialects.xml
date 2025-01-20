@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/code/enceladus_db/scripts/enceladus_events_view.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/code/enceladus_db/scripts/events_summary.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/code/enceladus_db/scripts/first_enceladus_flyby.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/code/enceladus_db/scripts/import.sql" dialect="PostgreSQL" />
