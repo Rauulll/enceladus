@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/code/enceladus_db/functions/pythg.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/code/enceladus_db/functions/pythag.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/code/enceladus_db/scripts/cassini_speed.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/code/enceladus_db/scripts/create_cda__schema.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/code/enceladus_db/scripts/create_flybys_table.sql" dialect="PostgreSQL" />
