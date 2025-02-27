@@ -1,3 +1,4 @@
+--creating a schema
 create schema if not exists import;
 drop table if exists import.master_plan;
 create table import.master_plan(

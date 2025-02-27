@@ -1,3 +1,4 @@
+--hot to import from csv files to postgres db
 drop table if exists master_plan;
 create table master_plan(
     start_time_utc text,
@@ -11,4 +12,6 @@ create table master_plan(
     title text,
     description text
 );
-COPY import.master_plan FROM '/var/lib/postgresql/cassini_data/curious_data/data/master_plan.csv' WITH DELIMITER ',' HEADER CSV;
+COPY import.master_plan 
+FROM '[path_to_file]/master_plan.csv' 
+WITH DELIMITER ',' HEADER CSV;

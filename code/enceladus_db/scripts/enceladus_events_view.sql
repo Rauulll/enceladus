@@ -1,3 +1,4 @@
+--creating a view
 drop view if exists enceladus_events;
 create view enceladus_events as
 select
